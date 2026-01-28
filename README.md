@@ -27,19 +27,16 @@ my $resends = $utp->tick( 0.1 );
 
 # DESCRIPTION
 
-`Net::uTP` implements μTP, the **Micro Transport Protocol ([BEP 29](https://www.bittorrent.org/beps/bep_0029.html))**,
-a congestion-controlled UDP transport designed to prevent background traffic from "choking" other internet activity
-(like VoIP or gaming) on the same network.
+`Net::uTP` implements μTP, the [Micro Transport Protocol](https://www.bittorrent.org/beps/bep_0029.html) (originally μTorrent transport protocol), a congestion-controlled UDP transport designed to prevent background traffic from "choking" other internet activity (like VoIP or gaming) on the same network.
 
-While originally developed for BitTorrent, this module is general-purpose and can be used for any application requiring
-high-throughput, low-impact data transfer.
+While originally developed for BitTorrent, this module is general-purpose and can be used for any application requiring high-throughput, low-impact data transfer.
 
 ## Key Mechanisms
 
-- **LEDBAT Congestion Control**: Uses one-way delay measurements to detect network congestion **before** packet loss occurs. It targets a specific queuing delay (100ms) and yields to other traffic.
-- **Selective ACKs (SACK)**: Efficiently recovers from packet loss by acknowledging specific received packets out-of-order, reducing redundant retransmissions.
-- **Out-of-Order Reassembly**: Automatically buffers and re-sequences packets received out of order, delivering a contiguous stream to the application.
-- **Fast Retransmit**: Detects dropped packets via duplicate ACKs and resends them immediately.
+- [LEDBAT Congestion Control](https://en.wikipedia.org/wiki/LEDBAT): Uses one-way delay measurements to detect network congestion **before** packet loss occurs. It targets a specific queuing delay (100ms) and yields to other traffic.
+- Selective ACKs (SACK): Efficiently recovers from packet loss by acknowledging specific received packets out-of-order, reducing redundant retransmissions.
+- Out-of-Order Reassembly: Automatically buffers and re-sequences packets received out of order, delivering a contiguous stream to the application.
+- Fast Retransmit: Detects dropped packets via duplicate ACKs and resends them immediately.
 
 # METHODS
 
