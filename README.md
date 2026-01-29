@@ -27,9 +27,12 @@ my $resends = $utp->tick( 0.1 );
 
 # DESCRIPTION
 
-`Net::uTP` implements μTP, the [Micro Transport Protocol](https://www.bittorrent.org/beps/bep_0029.html) (originally μTorrent transport protocol), a congestion-controlled UDP transport designed to prevent background traffic from "choking" other internet activity (like VoIP or gaming) on the same network.
+`Net::uTP` implements μTP, the [Micro Transport Protocol](https://www.bittorrent.org/beps/bep_0029.html) (originally
+μTorrent transport protocol), a congestion-controlled UDP transport designed to prevent background traffic from
+"choking" other internet activity (like VoIP or gaming) on the same network.
 
-While originally developed for BitTorrent, this module is general-purpose and can be used for any application requiring high-throughput, low-impact data transfer.
+While originally developed for BitTorrent, this module is general-purpose and can be used for any application requiring
+high-throughput, low-impact data transfer.
 
 ## Key Mechanisms
 
@@ -80,6 +83,6 @@ Sanko Robinson <sanko@cpan.org>
 
 # COPYRIGHT
 
-Copyright (C) 2008-2026 by Sanko Robinson.
+Copyright (C) 2026 by Sanko Robinson.
 
 This library is free software; you can redistribute it and/or modify it under the terms of the Artistic License 2.0.
