@@ -45,7 +45,7 @@ class Net::uTP v1.0.0 {
     method connect () {
         $state = 'SYN_SENT';
         my $pkt = $self->pack_header( ST_SYN, 0, $conn_id_recv );
-        $out_buffer{$seq_nr} = { data => $pkt, ts => time(), retries => 0 };
+        $out_buffer{$seq_nr} = { data => $pkt, ts => time, retries => 0 };
         $seq_nr = ( $seq_nr + 1 ) & 0xFFFF;
         $pkt;
     }
